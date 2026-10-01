@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://portfolio-creator-portfolio-builder-with.onrender.com/api/:path*"
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+/* ===== Custom Styles ===== */
+:root {
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+body {
+  font-family: var(--font-body);
+  background: #0a0a0f;
+}
+.font-display {
+  font-family: var(--font-display);
+}
+.aurora-text {
+  background: linear-gradient(90deg, #818cf8, #c084fc, #22d3ee);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.aurora-btn {
+  background: linear-gradient(90deg, #6366f1, #a855f7);
+}
+.outline-text {
+  color: transparent;
+  -webkit-text-stroke: 2px rgba(255, 255, 255, 0.85);
+  text-stroke: 2px rgba(255, 255, 255, 0.85);
+}
+.eyebrow {
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+.pill-outline {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.2s ease;
+}
+.pill-outline:hover {
+  border-color: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.05);
+}
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+/* Smooth page transitions */
+* {
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+select option {
+  background-color: #0a0a0f;
+  color: #fff;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0f;
+}
+::-webkit-scrollbar-thumb {
+  background: #3f3f56;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #55557a;
+}
+
+/* Gradient text helper — indigo to violet */
+.gradient-text {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Soft pulse animation for buttons */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.3); }
+  50% { box-shadow: 0 0 0 6px rgba(99, 102, 241, 0.1); }
+}
+.btn-glow:hover {
+  animation: pulse-glow 1.5s infinite;
+}
+
+.font-display {
+  font-family: 'Poppins', sans-serif;
+}
+.signal-text {
+  background: linear-gradient(90deg, #ec4899, #a78bfa, #22d3ee);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.pill-outline-cyan {
+  border: 2px solid #22d3ee;
+  transition: all 0.2s ease;
+}
+.pill-outline-cyan:hover {
+  background: rgba(34, 211, 238, 0.08);
+}
+.check-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.check-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 9999px;
+  border: 2px solid #ec4899;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+@keyframes marquee-left {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@keyframes marquee-right {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+.marquee-track-left {
+  animation: marquee-left 55s linear infinite;
+}
+.feature-pill {
+  white-space: nowrap;
+}
